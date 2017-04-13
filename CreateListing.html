@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+        <title>Post a Listing</title>
+        
+        
+        
+        
+        
+</head> 
+<body>
+
+<h1> Post a listing! </h1>
+
+<!-- Form to create account -->
+    <form action="CreateListing.php" method="post">
+        
+        Address: <input type="text" name="address"><br><br>
+        City: <input type="text" name="city"><br><br>
+        State: <input type="text" name="state"><br><br>
+        Zip Code: <input type="text" name="zip_code"><br><br>
+        Number of Bedrooms: <input type="number" name="bedrooms"><br><br>
+        Number of Bathrooms: <input type="number" name="bathrooms"><br><br>
+        Monthly Rent per Bedroom: <input type="text" name="rent"><br><br>
+        Pictures: <br>
+        <input type="file" name="pic1" accept="image/*"><br>
+        <input type="file" name="pic2" accept="image/*"><br>
+        <input type="file" name="pic3" accept="image/*"><br>
+        <input type="file" name="pic4" accept="image/*"><br>
+        <input type="file" name="pic5" accept="image/*"><br><br>
+        Email: <input type="email" name="email"><br><br>
+           
+        
+        <div>
+            <input type="submit" value="Create Listing!"/>
+        </div>
+        
+
+    </form>
+</body> 
+</html>

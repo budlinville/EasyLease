@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+        <title>Create Account</title>
+        
+        
+        
+        
+        
+</head> 
+<body>
+
+<h1> Create your account! </h1>
+
+<!-- Form to create account -->
+    <form action="getUsers.php" method="post">
+        
+        First Name: <input type="text" name="first_name"><br><br>
+        Last Name: <input type="text" name="last_name"><br><br>
+        Email: <input type="email" name="email"><br><br>
+        Password: <input type="password" name="password"><br><br>
+        Phone: <input type="tel" name="phone"><br><br>
+        Account Type: <br>
+        <input type="radio" name="accountType" value="Student"><label for="Student"> Student </label><br>
+        <input type="radio" name="accountType" value="PropertyOwner"><label for="PropertyOwner"> Property Owner </label><br><br>
+        
+        
+        <div>
+            <input type="submit" value="Create Account!"/>
+        </div>
+        
+
+    </form>
+</body> 
+</html>
