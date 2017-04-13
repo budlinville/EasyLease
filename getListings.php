@@ -10,17 +10,9 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
-//if(isset($_GET["numBedrooms"])) {
    $numBedrooms = $_POST["numBedrooms"];
-//}
-
-//if(isset($_GET["numBathrooms"])) {
    $numBathrooms = $_POST["numBathrooms"];
-//}
-
-//if(isset($_GET["rent"])) {
    $rent = $_POST["rent"];
-//
 
 //start session to store username for success.html
 //session_start();
