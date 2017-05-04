@@ -1,4 +1,13 @@
 <?php
+/*
+Written by Ben Conner
+Tested by Ben Conner
+Debugged by Ben Conner
+
+5/1/17
+Allows user to manage his listings
+*/
+
 	ini_set('display_errors', 0);
 	ini_set('display_startup_errors', 0);
     $mysqli = new mysqli("mysql.eecs.ku.edu", "alinvill", "lacrosse2", "alinvill");

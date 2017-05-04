@@ -1,4 +1,13 @@
 <?php
+/*
+Written by Weston Hack
+Tested by Bud Linville
+Debugged by Ben Conner
+
+5/1/17
+Creates a listings with user-inputted data
+*/
+
 //Connect to mysql database
 $mysqli = new mysqli("mysql.eecs.ku.edu", "alinvill", "lacrosse2", "alinvill");
 if ($mysqli->connect_error) {

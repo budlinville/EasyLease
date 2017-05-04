@@ -1,5 +1,15 @@
 <table>
 <?php
+/*
+Written by Bud Linville and Weston Hack
+Tested by Bud Linville and Weston Hack
+Debugged by Bud Linville and Weston Hack
+
+5/1/17
+PHP script for user account age to get only 
+their posted listings
+*/
+
 	ini_set('display_errors', 0);
 	ini_set('display_startup_errors', 0);
 	$mysqli = new \mysqli("mysql.eecs.ku.edu", "alinvill", "lacrosse2", "alinvill");

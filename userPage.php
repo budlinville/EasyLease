@@ -1,4 +1,14 @@
 <?php
+/*
+Written by Ben Conner
+Tested by Bud Linville
+Debugged by Bud Linville
+
+5/1/17
+links to a new page with contact information for other accounts
+Note: no current formatting - needs revision
+*/
+
 	//Connect to mysql database
 	error_reporting(E_ALL);
 $mysqli = new mysqli("mysql.eecs.ku.edu", "alinvill", "lacrosse2", "alinvill");
@@ -16,7 +26,10 @@ if ($result = $mysqli->query($query)) {
 	if ($row = $result->fetch_assoc()) {
 		?>
 		Owner: <?php
-		echo $row["Firstname"].' '.$row["Lastname"];
+		echo $row["Firstname"].' '.$row["Lastname"].' ';
+		echo $row["Email"].' ';
+		echo $row["Phone1"].' ';
+		echo $row["Phone2"].' ';
 		echo $row["Profile_Information"];
 	}
 }

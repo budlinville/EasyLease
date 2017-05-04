@@ -1,4 +1,12 @@
 <?php
+/*
+Written by Ben Conner
+Tested by Ben Conner
+Debugged by Ben Conner
+
+5/1/17
+Creates a user with user-inputted data
+*/
 	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);

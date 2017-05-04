@@ -1,5 +1,14 @@
 <table>
 <?php
+/*
+Written by Ben Conner
+Tested by Ben Conner
+Debugged by Ben Conner
+
+5/1/17
+returns listings that match specified numBedrooms, numBathrooms, rent paramaters
+*/
+
 	/*ini_set('display_errors', 0);
 	ini_set('display_startup_errors', 0);
 	*/

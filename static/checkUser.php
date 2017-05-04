@@ -1,4 +1,12 @@
 <?php
+/*
+Written by Bud Linville
+Tested by Ben Conner
+Debugged by Ben Conner
+
+5/1/17
+Verifies user login credentials
+*/
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
