@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manage Listings</title>
+	<script type = "text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="static/toolbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/main.css" />
+
+</head>
+<body>
+  <div id="header"></div>
+
+
+    <div id="listingSpot">
+	</div>
+
+
+    <script>
+	$(function() {
+		$.ajax(
+			{url: "static/manageListings.php"
+			,type:	"GET"
+			,data:	$(this).serialize()
+			,success:	function(data) {
+				$("#listingSpot").html(data);
+			}}
+		)
+	})
+    </script>
+
+
+</body>
+</html>

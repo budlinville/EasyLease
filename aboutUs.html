@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <style type = "text/css">
+	.SIDE {
+		color: white;
+	}
+	
+	.BODY {
+		background-image: url("condos.jpeg");
+		padding:0px;
+		margin:0px;
+	}
+	
+	.BUTTON{
+		background-color: #f9f9f9;
+		border: none;
+		color: black;
+		padding: 10px 30px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 20px;
+		font-family: "Times New Roman", Times, serif;
+	}
+	.CONTAINER1 {
+		width: 400px;
+		height: 250px;
+		background-color: #f9f9f9;
+		border: thick solid black;
+		border-radius: 20px;
+		padding: 15px;
+
+		overflow: hidden;
+		left: 0;
+		right: 0;
+
+		margin: auto;
+	}
+	.CONTAINER2 {
+		width: 400px;
+		height: 250px;
+		background-color: #f9f9f9;
+		border: thick solid black;
+		border-radius: 20px;
+		padding: 15px;
+	
+		overflow: hidden;
+		left: 0;
+		right: 0;
+
+		margin: auto;
+	}
+	#header {
+		padding-bottom: 5pt;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		color: #CCC;
+		background-color: #222;
+	}
+
+	#navigation {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	#navigation li {
+		display: inline;
+		width: 64px;
+		padding: 5pt 5pt;
+	}
+
+	#right {
+		float: right;
+	}
+
+	#navigation .title {
+		font-size: 125%;
+		width: 150px;
+		float: left;
+		text-align: left;
+		cursor: pointer;
+		padding: 0;
+		margin: 0 0 0 5pt;
+	}
+
+	#navigation a:hover {
+		background-color: #555;
+	}
+
+	#navigation a {
+		color: inherit;
+		text-decoration: none;
+		text-align: center;
+		display: inline-block;
+		padding: 5pt 5pt;
+	}
+
+	#navigation a:visited {
+		color: inherit;
+	}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="static/toolbar.js"></script>
+  <script>
+	function checkLogin() {
+      var loggedIn = false;
+      var username = getCookie("user");
+	  
+      if (username != "") {
+        loggedIn = true;
+        document.getElementById("username").innerHTML = username;
+      } else {
+        loggedIn = false;
+      }
+    }
+	
+	// NOTE: not written by Engineers Anonymous
+	// taken from https://www.w3schools.com/js/js_cookies.asp
+	function getCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+  </script>
+
+
+
+
+</head>
+<body onload = "checkLogin()" class = "BODY">
+<div class = "HEADER">
+	<div id="header"></div>
+	<h1></h1><!--Nice border-->
+	<div style="margin-top: 40pt;"></div>
+
+<div class = "CONTAINER1">
+<h1 style="font-size: 200%;"> What is EasyLease? </h1>
+
+<p> EasyLease is an online marketplace to connect KU students looking for rental housing and local property owners looking to lease to KU students. The platform allows property owners to post listings of their properties, with information such as address, price, size, and monthly rent, as well as upload pictures. Students looking for rental housing can then search EasyLease for their future home, with filtering available for the number of bedrooms, number of bathrooms, and monthly rent price. </p> <br> <br>
+
+</div>
+
+<div style="margin-top: 20pt;"></div>
+
+<div class = "CONTAINER2">
+
+<h2 style="font-size: 200%;"> Who are we? </h2>
+
+<p> We are a team of EECS students at The University of Kansas currently enrolled in EECS 448, a Software Engineering course. We developed EasyLease for a class project after experiencing first-hand the difficulties of trying to find rental housing as KU students. </p>
+
+</div>
+
+
+</body>
+</html>
