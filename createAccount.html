@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<!--
+Written by Bud Linville and Weston Hack
+Tested by Bud Linville and Weston Hack
+Debugged by Ben Conner
+
+5/1/17
+Page to create user account
+-->
+<head>
+	<title>Create Account</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="static/toolbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/main.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <div class="roundrect">
+    <h1> Create your account! </h1>
+
+    <!-- Form to create account -->
+
+    <form action="createUsers.php" method="post">
+<table>
+<tr>	<td>Username:</td><td><input type="text" name="username"></td>
+<tr>	<td>Password:</td><td><input type="password" name="password"></td>
+<tr>	<td>Email:</td><td><input type="email" name="email"></td>
+<tr>	<td>Phone:</td><td><input type="tel" name="phone"></td>
+</table>
+<br>
+      <div>
+        <input type="submit" value="Create Account!"/>
+      </div>
+    </div>
+
+  </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<!--
+Written by Bud Linville and Weston Hack
+Tested by Bud Linville and Weston Hack
+Debugged by Bud Linville and Weston Hack
+
+5/1/17
+Page to manage account and personal information
+Note: underdeveloped - still needs work
+-->
+<head>
+	<title>Manage Listings</title>
+	<script type = "text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="static/toolbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/main.css" />
+
+</head>
+<body>
+  <div id="header"></div>
+
+
+    <div id="listingSpot">
+	</div>
+
+
+    <script>
+	$(function() {
+		$.ajax(
+			{url: "static/manageListings.php"
+			,type:	"GET"
+			,data:	$(this).serialize()
+			,success:	function(data) {
+				$("#listingSpot").html(data);
+			}}
+		)
+	})
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<!--
+Written by Ben Conner
+Tested by Ben Conner
+Debugged by Ben Conner
+
+5/1/17
+Notice to users about project shortcomings
+-->
+<head>
+	<title>EasyLease</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="static/toolbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/main.css" />
+
+	<script type = "text/javascript">
+	
+$("submit").click(function(){
+	$.ajax({url: "static/getListings.php", success: function(result){
+		$("listingSpot").html(result);
+	}});
+});
+	</script>
+</head>
+<body>
+<div id="header"></div>
+<h1></h1><!--Nice border-->
+
+<div class="roundrect">
+	<h1>Disclaimer:</h1>
+	This site is not for public release.
+	This is not a functional release of the website.
+	The blank background is not final, we plan on adding a soft blue tech-y sort of background because we are uncreative students in software engineering
+
+	<br>
+	<small>TODO: Make these sentences complete-ish</small>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!--
+Written by Bud Linville and Weston Hack
+Tested by Ben Conner
+Debugged by Ben Conner
+
+5/1/17
+EasyLease Homepage
+Used to view listings
+-->
+
+<head>
+	<title>EasyLease</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="static/toolbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/main.css" />
+
+	<script type = "text/javascript">
+$(function() {
+$("#searchListings").on("submit",function (e) {
+	e.preventDefault()
+	$.ajax(
+		{url: $(this).attr('action')
+		,type:	"GET"
+		,data:	$(this).serialize()
+		,success:	function(data) {
+			$("#listingSpot").html(data)
+		}}
+	)
+})
+})
+	</script>
+</head>
+<body>
+<div id="header"></div>
+
+<div id="listingContainer">
+
+<!--<div style = "padding: 8px; left: 0; width: 200px; height: 600px; border: thick solid black;"> -->
+<div id="listingSelect" class="roundrect sidebox">
+	<form name = "listing" id="searchListings" action="static/getListings.php" method="GET">
+	Number of Bedrooms: <br><input type="number" name="numBedrooms"><br><br>
+	Number of Bathrooms: <br><input type="number" name="numBathrooms"><br><br>
+	Monthly Rent per Bedroom: <br><input type="text" name="rent"><br><br>
+	<input type = "submit" id = "submit" name = "submit" value = "Submit">
+	</form>
+</div>
+  
+<div id="listingBox" class="sidebox">
+	<div id="listingSpot" class="roundrect" style="height: 100%; margin-left: 10px; ">
+		<b>Listing info will be listed here...</b>
+	</div>
+</div>
+
+</div>
+
+<div style = "bottom: 0; fixed; font-size: 75%">
+<a href="disclaimer.html">Disclaimer</a>
+</div>
+
+</body>
+</html>

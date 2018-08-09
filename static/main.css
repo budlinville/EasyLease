@@ -1,0 +1,127 @@
+/*
+Written by Ben Conner
+Tested by Bud Linville
+Debugged by Ben Conner
+
+5/1/17
+design code for most of the pages formatting
+*/
+
+body {
+	margin-top: 40pt; /* for the toolbar */
+	background-image: url("condos.jpeg");
+}
+
+/*
+*  Toolbar
+*/
+#header {
+	padding-bottom: 5pt;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #CCC;
+	background-color: #222;
+}
+
+#navigation {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation li {
+	display: inline;
+	width: 64px;
+	padding: 5pt 5pt;
+}
+
+#right {
+	float: right;
+}
+
+#navigation .title {
+	font-size: 125%;
+	width: 150px;
+	float: left;
+	text-align: left;
+	cursor: pointer;
+	padding: 0;
+	margin: 0 0 0 5pt;
+}
+
+#navigation a:hover {
+	background-color: #555;
+}
+
+#navigation a {
+	color: inherit;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	padding: 5pt 5pt;
+}
+
+#navigation a:visited {
+	color: inherit;
+}
+
+/*
+*	Listings
+*/
+
+.roundrect {
+	border: thick solid black;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #f9f9f9;
+}
+
+.sidebox {
+	vertical-align: top;
+	display: table-cell;
+}
+
+#listingSelect {
+	text-align: left;
+	width: 15%;
+}
+
+#listingBox {
+	width: 100%;
+	margin-left: 16px;
+	overflow: hidden;
+}
+
+#listingContainer {
+	display: table;
+}
+
+#listingSpot {
+}
+
+/*
+*	Forms
+*/
+form {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 1.17em;
+	font-weight: bold;
+}
+
+form input[type="submit"]{
+	font-family: inherit;
+	font-size: inherit;
+	padding: 5px 15px;
+	text-align: center;
+
+	color: #f9f9f9;
+	background-color: #222;
+
+	border-radius: 15px;
+	border: none;
+}

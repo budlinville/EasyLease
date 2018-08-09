@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------------------------------
+| These are our current issues with out project, more or less arranged in order of significance:  |
+---------------------------------------------------------------------------------------------------
+1) Homepage still is not being populated with results
+
+2) Once we populate a homepage, we will need to be able to click on other users' names
+	to visit their profile. This will require the creation of a second cookie,
+	so that when we get to the next page, we can view the correct information
+	
+3) CreateListing needs to make sure a user is logged in before posting a picture.
+
+4) MakeListing needs to update table on mySQL with appropriate user ID
+
+5) There is no current implementation of pictures
+
+6) Logout does not work
+
+7) Profile page is currently meaningless
+
+8) The Account button in the top right corner does nothing when you click on the actual word, because it is implemented with "a-ref"'s

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!--
+Written by Ben Conner
+Tested by Bud Linville and Weston Hack
+Debugged by Ben Conner
+
+5/1/17
+Page to create listing
+Note: must be signed in to account to access this page
+-->
+<head>
+  <title>Post a Listing</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="static/toolbar.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/main.css" />
+
+  <script>
+	function checkLogin() {
+      var loggedIn = false;
+      var username = getCookie("user");
+	  
+      if (username != "") {
+        loggedIn = true;
+        document.getElementById("username").innerHTML = username;
+      } else {
+        loggedIn = false;
+      }
+    }
+  </script>
+</head>
+
+<body onload = "checkLogin()" class = "BODY">
+  <div id="header"></div>
+
+  <div class = "roundrect">
+    <h1> Post a listing! </h1>
+
+    <!-- Form to create account -->
+    <form action="static/createListing.php" method="POST">
+		<table>
+<tr>	<td>Address:</td><td><input type="text" name="address"></td>
+<tr>	<td>City:</td><td> <input type="text" name="city"></td>
+<tr>	<td>State:</td><td> <input type="text" name="state"></td>
+<tr>	<td>Zip Code:</td><td> <input type="text" name="zip_code"></td>
+<tr>	<td>Number of Bedrooms:</td><td> <input type="number" name="bedrooms"></td>
+<tr>	<td>Number of Bathrooms:</td><td> <input type="number" name="bathrooms"></td>
+<tr>	<td>Monthly Rent:</td><td> <input type="text" name="rent"></td>
+		</table>
+        <!--Pictures: <br>
+        <input type="file" name="pic1" accept="image/*"><br>
+        <input type="file" name="pic2" accept="image/*"><br>
+        <input type="file" name="pic3" accept="image/*"><br>
+        <input type="file" name="pic4" accept="image/*"><br>
+        <input type="file" name="pic5" accept="image/*"><br><br>
+        Email: <input type="email" name="email"><br><br>
+		-->
+		<br>
+        <div>
+          <input type="submit" value="Create Listing!"/>
+        </div>
+    </form>
+  </div>
+</body>
+</html>
